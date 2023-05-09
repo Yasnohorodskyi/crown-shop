@@ -1,3 +1,4 @@
+import { type } from "os";
 import styled, { css } from "styled-components";
 
 const subColor = "grey";
@@ -9,7 +10,11 @@ const shrinkLabelStyles = css`
   color: ${mainColor};
 `;
 
-export const FormInputLabel = styled.label`
+type FormInputLabelProps = {
+  shrink?: boolean;
+}                                   
+
+export const FormInputLabel = styled.label<FormInputLabelProps>`
   color: ${subColor};
   font-size: 16px;
   font-weight: normal;
